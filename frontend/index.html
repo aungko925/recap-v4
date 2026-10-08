@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171916" />
+    <meta name="description" content="Prepare a movie video for a Burmese-language recap." />
+    <title>Burma Movie Recap</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Burma Movie Recap home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>Burma <span class="brand-light">Recap</span></span>
+      </a>
+      <span class="topbar-note">MOVIE STUDIO</span>
+    </header>
+
+    <main class="workspace">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR NEXT STORY STARTS HERE</p>
+        <h1 id="page-title">Make a movie<br /><span>worth retelling.</span></h1>
+        <p class="intro-copy">Prepare your film for a clear, engaging recap in Burmese.</p>
+      </section>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="panel-heading">
+          <div>
+            <p class="step-label">NEW PROJECT <span>01 / 01</span></p>
+            <h2 id="form-title">Add your movie</h2>
+          </div>
+          <span class="status-dot" aria-label="Ready"></span>
+        </div>
+
+        <form id="recap-form">
+          <label for="movie-title">Movie title</label>
+          <input id="movie-title" name="title" type="text" maxlength="200" placeholder="e.g. The Road Home" required />
+
+          <label for="language">Recap language</label>
+          <select id="language" name="language">
+            <option value="my">Burmese</option>
+            <option value="en">English</option>
+          </select>
+
+          <label for="video-file">Movie video</label>
+          <label class="upload-area" for="video-file">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <span class="upload-copy"><strong id="file-name">Choose a video to upload</strong><small>MP4, MOV, MKV, WebM, AVI or M4V · up to 2 GB</small></span>
+            <span class="browse-label">Browse</span>
+          </label>
+          <input class="visually-hidden" id="video-file" name="video" type="file" accept="video/mp4,video/quicktime,video/x-matroska,video/webm,video/x-msvideo,.m4v" required />
+
+          <button class="submit-button" type="submit">
+            <span>Prepare recap</span><span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="result-panel" id="result-panel" aria-live="polite" hidden>
+        <p class="step-label">PROJECT DETAILS</p>
+        <h2 id="result-title"></h2>
+        <dl id="result-details"></dl>
+        <p class="result-note" id="result-note"></p>
+      </section>
+    </main>
+
+    <footer class="footer"><span>BURMA MOVIE RECAP</span><span>Stories, retold.</span></footer>
+  </body>
+</html>
